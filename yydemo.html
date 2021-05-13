@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .a {
+        overflow: hidden;
+        width: 500px;
+        height: 100px;
+        /* height: 500px; */
+        border: 1px solid #000;
+        margin: 50px auto;
+      }
+      .b {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        /* width: 200%;
+      height: 100%;
+      border: 1px solid #f00;
+      list-style: none;  */
+        animation: autoMove 5s infinite linear;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .b div {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        text-align: center;
+        line-height: 100px;
+      }
+
+      @keyframes autoMove {
+        from {
+          top: 0;
+        }
+        to {
+          top: -100%;
+        }
+      }
+      .bounce {
+        animation: bounce 2.5s infinite 0.5s both;
+        transform-origin: center bottom;
+      }
+
+      @keyframes bounce {
+        0%,
+        7%,
+        25%,
+        36%,
+        45%,
+        50% {
+          animation-timing-function: ease-out;
+          transform: translate3d(0, 0, 0);
+        }
+
+        15%,
+        16% {
+          animation-timing-function: ease-in;
+          transform: translate3d(0, -42px, 0);
+        }
+
+        30% {
+          animation-timing-function: ease-in;
+          transform: translate3d(0, -24px, 0);
+        }
+
+        41% {
+          animation-timing-function: ease-in;
+          transform: translate3d(0, -12px, 0);
+        }
+
+        47% {
+          animation-timing-function: ease-in;
+          transform: translate3d(0, -3px, 0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <img class="bounce" src="./2src by/assets/logo.png" alt="" />
+
+    <div class="a">
+      <div class="b">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,28 +1,40 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="appContainer">
+    <!-- <video src="../test.mp4" autoplay muted loop></video> -->
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
+<style lang="scss" scoped>
+  #appContainer {
+    height: 100%;
+    width: 100%;
+    // background-color: brown;
+    background: {
+      image: url('./assets/bgimg1.png');
+      size: cover;
+      repeat: no-repeat;
+      position: left center;
+    };
+    // background: url('../test.mp4');
+    // background: url('./assets/bgimg1.png');
+    // video {
+    //   position: absolute;
+    //   left: 0;
+    //   top: 0;
+    //   width: 100%;
+    //   height: 100%;
+    //   object-fit: cover;
+    //   z-index: -1;
+    // }
+
+  }
 </style>
